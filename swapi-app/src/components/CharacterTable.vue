@@ -18,3 +18,11 @@ export default {
     }
 }
 </script>
+
+
+<style scoped>
+table {
+	border-collapse: collapse;
+	width: 350px;
+}
+</style>
