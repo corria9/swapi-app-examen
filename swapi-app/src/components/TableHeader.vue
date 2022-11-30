@@ -2,12 +2,14 @@
 	<thead>
 		<tr>
 			<th>
-				<div>
-					Personajes
+				<div class="tableTitle">
+					Characters
 				</div>
 				<input
+					@input="search"
 					placeholder="Search"
 					type="text"
+					v-model="searchString"
 				/>
 			</th>
 		</tr>
@@ -15,13 +17,20 @@
 </template>
 
 <script>
-
 export default {
-    name: 'TableHeader',
+	name: 'TableHeader',
+	data() {
+		return {
+			searchString: '',
+		}
+	},
+	methods: {
+		search() {
+			this.$emit('search', this.searchString)
+		},
+	},
 }
-
 </script>
-
 
 <style scoped>
 input {
@@ -55,4 +64,3 @@ th {
 	padding: 15px;
 }
 </style>
-

@@ -1,11 +1,11 @@
 <template>
 	<tr>
-		<td>
+		<td @click="show = !show">
 			<div class="nameContainer">
 				{{ character.name }}
 			</div>
 			<transition name="fade">
-				<div>
+				<div class="moreInfo" v-if="show">
 					<strong>Birth Year: </strong> {{ character.birth_year }}
 					<br />
 					<strong>Gender: </strong> {{ character.gender }}
@@ -20,13 +20,23 @@
 </template>
 
 <script>
-
 export default {
-    name: 'TableRow',
+	name: 'TableRow',
+	props: {
+		character: Object,
+	},
+	data() {
+		return {
+			show: false,
+		}
+	},
+	methods: {
+		closeInfo() {
+			this.show = false
+		},
+	},
 }
-
 </script>
-
 
 <style scoped>
 .fade-enter-active,
