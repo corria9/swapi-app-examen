@@ -3,7 +3,7 @@
 		<tr>
 			<th>
 				<div class="tableTitle">
-					Characters
+					Personaje
 				</div>
 				<input
 					@input="search"

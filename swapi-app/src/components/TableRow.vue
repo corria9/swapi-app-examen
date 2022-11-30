@@ -6,13 +6,13 @@
 			</div>
 			<transition name="fade">
 				<div class="moreInfo" v-if="show">
-					<strong>Birth Year: </strong> {{ character.birth_year }}
+					<strong>Año Nacimiento: </strong> {{ character.birth_year }}
 					<br />
-					<strong>Gender: </strong> {{ character.gender }}
+					<strong>Genero: </strong> {{ character.gender }}
 					<br />
-					<strong>Height: </strong> {{ character.height }}
+					<strong>Altura: </strong> {{ character.height }}
 					<br />
-					<strong> Mass: </strong> {{ character.mass }}
+					<strong> Peso: </strong> {{ character.mass }}
 				</div>
 			</transition>
 		</td>

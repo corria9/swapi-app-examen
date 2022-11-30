@@ -5,6 +5,11 @@
 			<button @click="pageSwitch('back')">&laquo;</button>
 		</td>
 	</tr>
+
+	<div class="center">
+		<h5>Aplicacion Creada para Proceso de Seleccion para Corus Consulting</h5>
+		<h6>Juan Armando Coria Fierros</h6>
+	</div>
 </template>
 
 <script>
@@ -37,5 +42,8 @@ td {
 
 .pagination button:hover {
 	background-color: rgb(36, 35, 35);
+}
+.center{
+	text-align: center;
 }
 </style>
